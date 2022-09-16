@@ -1,0 +1,146 @@
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cream);
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card {
+    width: 90%;
+    max-width: 560px;
+    margin: 2em auto;
+    background-color: var(--white);
+    border-radius: 10px;
+}
+
+.card__image {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.card__main {
+    padding: 1.5em;
+}
+
+.card__main--subtitle {
+    color: var(--dark-grayish-blue);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.card__main--title {
+    margin: .4em 0;
+    font-family: 'Fraunces', sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.card__main--text {
+    color: var(--dark-grayish-blue);
+    line-height: 1.4;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    margin: 1em 0 .5em;
+}
+
+.price__discount {
+    margin-right: .5em;
+    color: var(--dark-cyan);
+    font-size: 2rem;
+    font-family: 'Fraunces', sans-serif;
+}
+
+.price {
+    color: var(--dark-grayish-blue);
+    text-decoration: line-through;
+}
+
+.card__main--btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0 0;
+    padding: 1em 0;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+}
+
+.card__main--btn:hover {
+    opacity: .5;
+    transition: .3s;
+}
+
+.card__main--btn img {
+    margin-right: .5em;
+}
+
+@media (min-width: 600px) {
+    .card {
+        display: flex;
+    }
+
+    picture {
+        width: 50%;
+    }
+
+    .card__image {
+        height: 100%;
+        border-top-right-radius: 0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .card__main {
+        width: 50%;
+        padding: 2em;
+    }
+
+    .card__main--title {
+        margin: .5em 0 .7em;
+        font-size: 2.2rem;
+    }
+
+    .prices {
+        margin: 1.25em 0 1em;
+    }
+}
